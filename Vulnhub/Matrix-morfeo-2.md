@@ -2,4 +2,4 @@
 
 Iniciamos las 2 máquinas, en este caso iniciamos **(MATRIX-BREAKOUT: 2 MORFEO)** y en su defecto nuestra máquina personal **(Kali)**, al iniciar las dos máquinas, realizamos un escaneo de nuestra red:
 
-<img src=Matrix-morfeo-2\Imagenes\arp-scan-l.png align=center heigth="3500px" width="6000px">
+<img src=Matrix-morfeo-2\Imagenes\arp-scan-l.png align=center heigth="2500px" width="4000px">
