@@ -49,4 +49,4 @@ Nmap done: 1 IP address (1 host up) scanned in 7.30 seconds
 
 Podemos abrir el navegador e insertamos la dirección IP a ver que nos aparece.
 
-<img src=Vulnhub\Matrix-morfeo-2\Imagenes\Navegador.png>
+<img src=Matrix-morfeo-2\Imagenes\Navegador.png>
