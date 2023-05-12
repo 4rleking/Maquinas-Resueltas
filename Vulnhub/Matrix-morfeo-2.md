@@ -50,3 +50,39 @@ Nmap done: 1 IP address (1 host up) scanned in 7.30 seconds
 Podemos abrir el navegador e insertamos la dirección IP a ver que nos aparece.
 
 <img src=Matrix-morfeo-2\Imagenes\Navegador.png>
+
+Aplicamos detección de directorios con gobuster
+
+```
+┌──(root㉿kali)-[/home/al3j4ndr0]
+└─# gobuster dir -u http://192.168.231.130 -w /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt -x php,html,txt -t 100 -b 404
+===============================================================
+Gobuster v3.5
+by OJ Reeves (@TheColonial) & Christian Mehlmauer (@firefart)
+===============================================================
+[+] Url:                     http://192.168.231.130
+[+] Method:                  GET
+[+] Threads:                 100
+[+] Wordlist:                /usr/share/wordlists/dirbuster/directory-list-2.3-medium.txt
+[+] Negative Status codes:   404
+[+] User Agent:              gobuster/3.5
+[+] Extensions:              txt,php,html
+[+] Timeout:                 10s
+===============================================================
+2023/05/11 20:39:26 Starting gobuster in directory enumeration mode
+===============================================================
+/.html                (Status: 403) [Size: 280]
+/.php                 (Status: 403) [Size: 280]
+/index.html           (Status: 200) [Size: 348]
+/javascript           (Status: 301) [Size: 323] [--> http://192.168.231.130/javascript/]
+/robots.txt           (Status: 200) [Size: 47]
+/graffiti.txt         (Status: 200) [Size: 139]
+/graffiti.php         (Status: 200) [Size: 451]
+/.html                (Status: 403) [Size: 280]
+/.php                 (Status: 403) [Size: 280]
+/server-status        (Status: 403) [Size: 280]
+Progress: 882032 / 882244 (99.98%)
+===============================================================
+2023/05/11 20:42:01 Finished
+===============================================================
+```
