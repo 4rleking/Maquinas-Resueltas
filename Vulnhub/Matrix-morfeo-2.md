@@ -4,11 +4,20 @@ Para descargar la máquina ir a https://www.vulnhub.com/entry/matrix-breakout-2-
 
 Iniciamos las 2 máquinas, en este caso iniciamos **(MATRIX-BREAKOUT: 2 MORFEO)** y en su defecto nuestra máquina personal **(Kali)**, al iniciar las dos máquinas, realizamos un escaneo de nuestra red:
 
-<img src=Matrix-morfeo-2\Imagenes\arp-scan.jpg align=center heigth="400px" width="950px">
+```
+└─# arp-scan -l
+Interface: eth0, type: EN10MB, MAC: 00:0c:29:5f:33:44, IPv4: 192.168.231.128
+Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
+192.168.231.1   00:50:56:c0:00:08       (Unknown)
+192.168.231.2   00:50:56:ea:8a:e1       (Unknown)
+192.168.231.130 00:0c:29:8b:ff:c4       (Unknown)
+192.168.231.254 00:50:56:e7:14:19       (Unknown)
+
+4 packets received by filter, 0 packets dropped by kernel
+Ending arp-scan 1.10.0: 256 hosts scanned in 2.304 seconds (111.11 hosts/sec). 4 responded
+```
 
 Una vez identificado el host de la máquina objetivo, utilizamos la herramienta nmap:
-
-<img src=Matrix-morfeo-2\Imagenes\nmap-sV-sC.jpg align=center heigth="400px" width="950px">
 
 ```
 ┌──(root㉿kali)-[/home/al3j4ndr0]
