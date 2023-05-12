@@ -86,3 +86,20 @@ Progress: 882032 / 882244 (99.98%)
 2023/05/11 20:42:01 Finished
 ===============================================================
 ```
+Abrimos en el explorador la página "http://192.168.231.130/graffiti.php" y nos damos cuenta de que es un blog, el cual cualquier persona que tenga acceso puede dejar alg+un mensaje escrito para los demás que ingresen.
+
+Dado esto, abrimos la herramienta de BurpSuite, y activamos el proxy, tanto en el Explorador como en BurpSuite; (En el explorador ingresamos la IP "127.0.0.1" y el puerto "8080"); dado esto nos vamos al explorador y enviamos un mensaje cualquier dentro del "graffiti.php", al hacer esto se envía la petición a BurpSuite.
+
+Ya teniendo la petición en BurpSuite, seleccionamos con el segundo botón del mouse y seleccionamos la opcion de enviarlo al "Repeater", ahí podemos cambiar los valores que necesitamos.
+
+Una vez realizado esto, intentamos cambiar el nombre del archivo, para saber si podemos generar archivos dentro del directorio del host.
+
+Cuando enviamos la petición desde BurpSuite, nos vamos al explorador e intentamos ingresar al archivo que creamos desde BurpSuite y si nos da acceso al archivo, podremos crear los archivos que necesitemos.
+
+Dado esto, buscamos una (Shell reverse) para PHP, "Yo tengo 1 código en mi repositorio funcional" que fue el que utilice para esta ocasión, copiamos el código y lo ingresamos en BurpSuite, en la sección "message=" y al final en la sección "file=" agregamos el nombre (shell.php). Una vez hecho esto, sólo enviamos la petición. Nota importante: tendremos que cambiar una IP en el código, que será nuestra IP local y el puerto que en esta ocasión seleccione el 4040 (pero puede ser cualquiera).
+
+Nos dirigimos al explorador y desactivamos el proxy.
+
+Nos dirigimos a la terminal e insertamos el siguiente código. (nc -lnvp 4040); con esto abrimos el puerto 4040 y lo dejamos esperando cualquier petición.
+
+activado esto, nos dirigimos al explorador e intentamos abrir la página "http://192.168.231.130/shell.php", cuando intentamos abrir esta página, nos dirigimos a la terminal y vemos que la shell si funcionó y que ya tenemos acceso a la máquina.
