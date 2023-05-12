@@ -5,8 +5,9 @@ Para descargar la máquina ir a https://www.vulnhub.com/entry/matrix-breakout-2-
 Iniciamos las 2 máquinas, en este caso iniciamos **(MATRIX-BREAKOUT: 2 MORFEO)** y en su defecto nuestra máquina personal **(Kali)**, al iniciar las dos máquinas, realizamos un escaneo de nuestra red:
 
 ```
+┌──(root㉿kali)-[/home/al3j4ndr0]
 └─# arp-scan -l
-Interface: eth0, type: EN10MB, MAC: 00:0c:29:5f:33:44, IPv4: 192.168.231.128
+Interface: eth0, type: EN10MB, MAC: xx:xx:xx:xx:xx:xx, IPv4: 192.168.231.164
 Starting arp-scan 1.10.0 with 256 hosts (https://github.com/royhills/arp-scan)
 192.168.231.1   00:50:56:c0:00:08       (Unknown)
 192.168.231.2   00:50:56:ea:8a:e1       (Unknown)
@@ -45,3 +46,7 @@ Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
 Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 7.30 seconds
 ```
+
+Podemos abrir el navegador e insertamos la dirección IP a ver que nos aparece.
+
+<img src=Vulnhub\Matrix-morfeo-2\Imagenes\Navegador.png>
